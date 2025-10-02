@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ImageHeader: View {
-    let imageDim: CGFloat = 300
+    let imageDimX: CGFloat = 300
+    let imageDimY: CGFloat = 280
     
     var body: some View {
         Image(gettingStartedImage)
             .resizable()
-            .frame(width: imageDim, height: imageDim)
-            .clipShape(RoundedRectangle(cornerRadius: 30))
+            .scaleEffect(3)
+            .frame(width: imageDimX, height: imageDimY)
+            .clipShape(SquareCircleShape())
             .padding()
+            .scaleEffect(0.95)
     }
 }
 
