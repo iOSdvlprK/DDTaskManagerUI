@@ -24,33 +24,40 @@ struct ImageHeader: View {
 
 struct GetStartedView: View {
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(Color("white"))
-                .frame(width: 70, height: 70)
-                .offset(x: -50)
-                .shadow(color: .black.opacity(0.1), radius: 4, x: 5, y: 5)
-            
-            Text("Get Started")
-                .font(.title3)
-                .fontWeight(.bold)
-                .foregroundStyle(Color("darkBlue1"))
+        NavigationLink {
+            Text("An Amazing New View")
+        } label: {
+            ZStack {
+                Circle()
+                    .fill(Color("white"))
+                    .frame(width: 70, height: 70)
+                    .offset(x: -50)
+                    .shadow(color: .black.opacity(0.1), radius: 4, x: 5, y: 5)
+                
+                Text("Get Started")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color("darkBlue1"))
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
 struct GettingStartedView: View {
     var body: some View {
-        ZStack {
-            Color("lightBlue1").ignoresSafeArea()
-            
-            VStack {
-                ImageHeader()
+        NavigationStack {
+            ZStack {
+                Color("lightBlue1").ignoresSafeArea()
                 
-                Spacer()
-                
-                BottomOfGettingStartedView()
+                VStack {
+                    ImageHeader()
+                    
+                    Spacer()
+                    
+                    BottomOfGettingStartedView()
+                        .padding()
+                }
             }
         }
     }
