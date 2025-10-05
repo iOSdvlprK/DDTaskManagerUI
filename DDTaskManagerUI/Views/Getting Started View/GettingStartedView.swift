@@ -28,4 +28,5 @@ struct GettingStartedView: View {
 
 #Preview {
     GettingStartedView()
+        .preferredColorScheme(.dark)
 }
