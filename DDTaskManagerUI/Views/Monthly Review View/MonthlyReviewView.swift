@@ -13,6 +13,8 @@ struct MonthlyReviewView: View {
             LinearGradient(colors: [lightPurple, purple1], startPoint: .topTrailing, endPoint: .bottomLeading)
                 .ignoresSafeArea()
             
+            TopAvatarView()
+            
             VStack {
                 HStack {
                     VStack(alignment: .leading, spacing: 7) {
@@ -41,6 +43,7 @@ struct MonthlyReviewView: View {
                         Text("Mike and Anita")
                             .font(.headline)
                             .fontWeight(.thin)
+                            .foregroundStyle(white)
                         
                         HStack {
                             HStack(spacing: -15) {
