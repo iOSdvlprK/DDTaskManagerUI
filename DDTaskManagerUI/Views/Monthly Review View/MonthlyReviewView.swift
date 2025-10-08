@@ -13,9 +13,9 @@ struct MonthlyReviewView: View {
             LinearGradient(colors: [lightPurple, purple1], startPoint: .topTrailing, endPoint: .bottomLeading)
                 .ignoresSafeArea()
             
-            TopAvatarView()
-            
             VStack {
+                TopAvatarView()
+                
                 HStack {
                     VStack(alignment: .leading, spacing: 7) {
                         Text("Hi Joe")
