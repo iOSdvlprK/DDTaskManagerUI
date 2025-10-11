@@ -24,7 +24,7 @@ struct CurrentTaskView: View {
                 HStack {
                     let circleSize: CGFloat = 40
                     
-                    HStack(spacing: -15) {
+                    HStack(spacing: -10) {
                         CircleImageView(imageName: person1, color: white, size: circleSize, lineWidth: 2)
                         
                         CircleImageView(imageName: person2, color: white, size: circleSize, lineWidth: 2)
